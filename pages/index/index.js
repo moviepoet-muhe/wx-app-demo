@@ -53,7 +53,7 @@ Page({
       })
       // Promise.allSettled() 返回的 Promise 对象是 fulfilled 状态。
       // 携带数组数据返回。数组中元素的类型为对象，结构: {status, value} 或 {status, reason}
-      console.log('result:', result);
+      console.log('Promise.allSettled()返回两个查询结果对象：', result);
       this.setData({
         banners: result[0].value.banners,
         categories: result[1].value.list,
@@ -100,7 +100,7 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: async function () {
-    console.log('下拉刷新...');
+    console.log('主页下拉刷新...');
     try {
       // 同时发送两个网络请求（并行执行）
       const result = await Promise.allSettled([
@@ -128,14 +128,14 @@ Page({
    */
   onReachBottom: async function () {
     if (this.data.isEnd) {
-      console.log('所有数据全部查询结束')
+      console.log('主页上滑所有数据全部查询结束')
       return
     }
-    console.log('查询更多推荐商品数据...')
+    console.log('主页正在上滑查询更多推荐商品数据...')
     try {
       // 发送网络请求，查询更多首页推荐数据
       const result = await get('/api/tab/1/feeds', { start: this.data.nextIndex })
-      console.log('result:', result)
+      console.log('首页上滑查询的商品数据result:', result)
       this.setData({
         goods: [
           ...this.data.goods,
@@ -160,17 +160,17 @@ Page({
    * 跳转到详情页面
    */
   jumpToDetail: (event) => {
-    console.log('跳转到详情页面', event)
+    console.log('跳转到详情页面，事件源对象：', event)
     // 从事件源对象的 dataset 中，可以获取到对应节点中定义的 `data-*` 的自定义属性值
-    const { id, title, price } = event.target.dataset
-    // // 也可以借助本地存储的方式向另一个页面传递数据
+    const id = event.target.dataset.id
+    // // 也可以借助本地存储的方式向另一个页面传递数据 todo
     // wx.setStorage({
     //   key: 'goods',
     //   data: {id, title, price}
     // })
     // 使用 wx.navigateTo() 跳转到应用内的某个页面，是跳转到非tabBar页面
     wx.navigateTo({
-      url: `/pages/detail/index?id=${id}&title=${title}&price=${price}`,
+      url: `/pages/detail/index?id=${id}`,
     })
   },
 

@@ -18,7 +18,7 @@ Page({
    * 可以在回调函数的参数中，获取到跳转到当前页面时，路径中传递的 ? 查询字符串参数数据
    */
   onLoad: async function (query) {
-    console.log('参数:', query)
+    console.log('接收路径中传递的? 查询字符串参数:', query)
     // this.setData(query) 实际等效于
     this.setData({
       id: query.id, // 来自主页URL的字符串
@@ -27,7 +27,7 @@ Page({
     // 根据获取到的商品 id 查询商品详情
     try {
       const result = await get('/api/detail', { id: query.id })
-      console.log('详情:', result);
+      console.log('根据获取到的商品 id 查询商品详情:', result);
       this.setData({
         title: result.detail.title,
         price: result.detail.price,
