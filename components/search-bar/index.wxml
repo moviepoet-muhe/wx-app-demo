@@ -1,0 +1,10 @@
+<view class="search-bar" style="height: {{ barHeight }}px">
+  <view class="search-bar-container" style="width: {{barWidth}}px; height: {{inputHeight}}px;">
+    <image src="/images/dianpu.png" style="width: 64rpx; height: 64rpx;" />
+    <view class="search-input-container">
+      <input type="text" placeholder="{{ placeholder }}" class="search-input" style="height: {{ inputHeight }}px; border-radius: {{inputHeight}}px;" />
+      <icon type="search" class="search-icon" />
+    </view>
+    <view class="search-login">登录</view>
+  </view>
+</view>

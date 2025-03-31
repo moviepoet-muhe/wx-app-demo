@@ -1,0 +1,20 @@
+<view class="page-body">
+  <view class="page-body-wrapper">
+    <camera mode="scanCode" device-position="{{ devicePosition }}" flash="off" binderror="error" style="width: 100%; height: 300px;" bindscancode="handleScancode"></camera>
+    <view class="btn-area">
+      <button type="primary" bindtap="changeDevicePosition">切换摄像头朝向</button>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="takePhoto">拍照</button>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="startRecord">开始录像</button>
+    </view>
+    <view class="btn-area">
+      <button type="primary" bindtap="stopRecord">结束录像</button>
+    </view>
+    <view class="preview-tips">预览</view>
+    <image wx:if="{{src}}" mode="widthFix" src="{{src}}"></image>
+    <video wx:if="{{videoSrc}}" class="video" src="{{videoSrc}}"></video>
+  </view>
+</view>

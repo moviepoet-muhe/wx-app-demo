@@ -1,0 +1,42 @@
+<!-- <import src="index.skeleton.wxml" /> -->
+<!-- <template is="skeleton" wx:if="{{loading}}" /> -->
+
+<view class="home">
+  <!-- 渲染自定义组件 search-bar -->
+  <search-bar placeholder="辣条" />
+  <!-- 头部搜索栏 -->
+  <!-- <view class="search-bar">
+    <image src="/images/dianpu.png" style="width: 81rpx; height: 81rpx;" />
+    <view class="search-input-container">
+      <input type="text" placeholder="请输入搜索关键字" class="search-input" />
+      <icon type="search" class="search-icon" />
+    </view>
+    <view class="search-login">登录</view>
+  </view> -->
+
+  <!-- 滚动分类 -->
+  <scroll-view class="scroll-category" scroll-x>
+    <!-- navigator 默认是向非tabbar页面跳转，如果要跳转到tabbar页面，则需要设置 open-type 为 switchTab -->
+    <!-- <navigator url="/pages/category/index" open-type="switchTab" class="category-item" wx:for="{{ categories }}" wx:key="id">{{ item.name }}</navigator> -->
+    <text class="category-item" wx:for="{{ categories }}" wx:key="id" bind:tap="jumpToCategory" data-id="{{ item.id }}" data-name="{{ item.name }}">{{ item.name }}</text>
+  </scroll-view>
+
+  <!-- 轮播图 -->
+  <swiper autoplay circular indicator-dots indicator-active-color="#d81e06" interval="3000" style="width: 750rpx; height: 300rpx;">
+    <swiper-item wx:for="{{ banners }}" wx:key="id">
+      <image src="{{ item.image }}" style="width: 100%; height: 100%;" />
+    </swiper-item>
+  </swiper>
+  <view bind:tap="startPullDownRefresh">测试 点击下拉刷新</view>
+  <!-- 推荐列表 -->
+  <view class="list">
+    <view class="list-item" wx:for="{{ goods }}" wx:key="id">
+      <image src="{{ item.image }}" class="goods-image" data-id="{{ item.id }}" data-title="{{ item.title }}" data-price="{{ item.price }}" bindtap="jumpToDetail" />
+      <navigator class="title" url="/pages/detail/index?id={{item.id}}">{{ item.title }}</navigator>
+      <view class="price">¥{{ item.price }}</view>
+    </view>
+  </view>
+  <view wx:if="{{ !isEnd }}">加载中...</view>
+  <view wx:else>所有数据全部加载完毕</view>
+
+</view>

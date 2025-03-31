@@ -1,0 +1,21 @@
+<view class="detail-container">
+  <!-- 基础信息 -->
+  <view class="id-row">商品ID: {{id}}</view>
+  <view class="title">{{title}}</view>
+
+  <!-- 价格显示 -->
+  <view class="price-section">
+    <text class="current-price">¥{{price}}</text>
+    <text class="origin-price" wx:if="{{originPrice}}">原价:¥{{originPrice}}</text>
+  </view>
+
+  <!-- 图片轮播 -->
+  <view class="photo-section">
+    <view class="section-title">商品图集（{{images.length}}张）</view>
+    <scroll-view class="photo-list" scroll-x>
+      <block wx:for="{{images}}" wx:key="id">
+        <image src="{{item.url}}" class="goods-photo" />
+      </block>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,19 @@
+<view>
+  我的
+
+  <button bind:tap="handleTakePhoto">拍照</button>
+  <button bind:tap="handleTakeRecord">录像</button>
+  <button bind:tap="handleScanCode">扫码</button>
+
+  <video src="{{ videoSrc }}" style="width: 375px; height: 300px;" />
+
+  <button bind:tap="handleChooseLocation">通过地图选择收货地址</button>
+
+  <text>{{ address.name }}</text>
+
+  <van-button type="primary">primary</van-button>
+  <van-button type="danger">危险按钮</van-button>
+
+  <van-cell title="选择单个日期" value="{{ date }}" bind:click="onDisplay" />
+  <van-calendar show="{{ show }}" bind:close="onClose" bind:confirm="onConfirm" />
+</view>

@@ -1,0 +1,26 @@
+/* 图片列表样式 */
+.photo-list {
+	white-space: nowrap;
+	padding: 20rpx 0;
+}
+
+.goods-photo {
+	width: 240rpx;
+	height: 240rpx;
+	border-radius: 12rpx;
+	margin-right: 20rpx;
+}
+
+/* 价格样式 */
+.current-price {
+	color: #e4393c;
+	font-size: 36rpx;
+	font-weight: bold;
+}
+
+.origin-price {
+	color: #999;
+	font-size: 24rpx;
+	text-decoration: line-through;
+	margin-left: 20rpx;
+}

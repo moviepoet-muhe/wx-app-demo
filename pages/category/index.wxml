@@ -1,0 +1,3 @@
+<view>分类
+  <view>一级分类id: {{ id }}, 名称: {{ name }}</view>
+</view>

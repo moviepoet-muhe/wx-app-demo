@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "search-bar": "/components/search-bar/index"
+  },
+  "navigationBarTitleText": "首页",
+  "onReachBottomDistance": 200,
+  "enablePullDownRefresh": true,
+  "navigationStyle": "custom"
+}

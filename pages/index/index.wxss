@@ -1,0 +1,66 @@
+/* @import "./index.skeleton.wxss"; */
+
+/* 搜索栏 */
+.search-bar {
+  width: 750rpx;
+  height: 120rpx;
+  background-color: #d81e06;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-input-container {
+  flex: 1;
+  position: relative;
+}
+
+.search-input {
+  flex: 1;
+  background-color: #ffffff;
+  height: 81rpx;
+  border-radius: 81rpx;
+  margin-left: 12rpx;
+  padding-left: 60rpx;
+}
+
+.search-icon {
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+}
+
+.search-login {
+  width: 120rpx;
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+}
+
+/* 分类滚动 */
+.scroll-category {
+  white-space: nowrap;
+  padding: 12rpx 0;
+}
+
+.category-item {
+  padding: 0 18rpx;
+}
+
+/* 推荐列表 */
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.list-item {
+  width: 370rpx;
+  background-color: #eaeaea;
+  margin-top: 12rpx;
+}
+
+.list-item .goods-image {
+  width: 360rpx;
+  height: 360rpx;
+}

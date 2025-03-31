@@ -1,0 +1,35 @@
+/* 搜索栏 */
+.search-bar {
+  width: 750rpx;
+  background-color: #d81e06;
+  display: flex;
+  justify-content: start;
+  align-items: flex-end;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+.search-bar-container {
+  display: flex;
+  align-items: center;
+}
+.search-input-container {
+  flex: 1;
+  position: relative;
+}
+.search-input {
+  flex: 1;
+  background-color: #ffffff;
+  margin-left: 12rpx;
+  padding-left: 60rpx;
+}
+.search-icon {
+  position: absolute;
+  top: 16rpx;
+  left: 16rpx;
+}
+.search-login {
+  width: 120rpx;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+}
