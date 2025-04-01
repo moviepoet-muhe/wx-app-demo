@@ -61,7 +61,7 @@ Page({
         nextIndex: result[0].value.items.nextIndex,
         isEnd: result[0].value.items.isEnd,
 
-        loading: false,
+        loading: false,// 数据加载完成，
       })
     } catch (error) {
       console.log('error:', error);
@@ -204,5 +204,4 @@ Page({
   startPullDownRefresh() {
     wx.startPullDownRefresh()
   }
-
 })

@@ -1,14 +1,14 @@
 <!--
-此文件为开发者工具生成，生成时间: 2025/3/28下午4:29:49
+此文件为开发者工具生成，生成时间: 2025/4/1上午11:05:02
 使用方法：
-在 /Users/xiaoming/Desktop/HarmonyOS-2403/小程序/day03-小程序组件、API使用/code/demo/pages/index/index.wxml 引入模板
+在 C:\Users\dengw\Desktop\小程序\app-demo\pages\index\index.wxml 引入模板
 
 ```
 <import src="index.skeleton.wxml"/>
 <template is="skeleton" wx:if="{{loading}}" />
 ```
 
-在 /Users/xiaoming/Desktop/HarmonyOS-2403/小程序/day03-小程序组件、API使用/code/demo/pages/index/index.wxss 中引入样式
+在 C:\Users\dengw\Desktop\小程序\app-demo\pages\index\index.wxss 中引入样式
 ```
 @import "./index.skeleton.wxss";
 ```
@@ -19,43 +19,44 @@
   <view class="sk-container">
     <view class="home">
       <view is="components/search-bar/index">
-        <view class="index--search-bar" style="height: 60px">
-          <view class="index--search-bar-container" style="width: 319px; height: 32px;">
-            <image style="width: 35px; height: 35px;" class="sk-image"></image>
-            <view class="index--search-input-container">
-              <view class="index--search-input sk-image" placeholder="辣条" style="height: 32px; border-radius: 32px;" type="text"></view>
-              <icon class="index--search-icon sk-image" type="search" color="#EFEFEF"></icon>
+        <view class="bar-index--search-bar" style="height: 56px">
+          <view class="bar-index--search-bar-container" style="width: 281px; height: 32px;">
+            <image style="width: 32px; height: 32px;" class="sk-image"></image>
+            <view class="bar-index--search-input-container">
+              <view class="bar-index--search-input sk-image" placeholder="辣条" style="height: 32px; border-radius: 32px;" type="text"></view>
+              <icon class="bar-index--search-icon sk-image" type="search" color="#EFEFEF"></icon>
             </view>
-            <view class="index--search-login sk-transparent sk-text-14-2857-67 sk-text" style="background-position-x: 50%;">登录</view>
+            <view class="bar-index--search-login sk-transparent sk-text-14-2857-91 sk-text" style="background-position-x: 50%;">登录</view>
           </view>
         </view>
       </view>
       <scroll-view scroll-x="true" class="scroll-category">
-        <text class="category-item sk-transparent sk-text-14-2857-100 sk-text" data-id="1" data-name="今日推荐">今日推荐</text>
-        <text class="category-item sk-transparent sk-text-14-2857-317 sk-text" data-id="2" data-name="女装">女装</text>
-        <text class="category-item sk-transparent sk-text-14-2857-226 sk-text" data-id="5" data-name="男装">男装</text>
-        <text class="category-item sk-transparent sk-text-14-2857-619 sk-text" data-id="4" data-name="配饰">配饰</text>
-        <text class="category-item sk-transparent sk-text-14-2857-722 sk-text" data-id="13" data-name="女鞋">女鞋</text>
-        <text class="category-item sk-transparent sk-text-14-2857-314 sk-text" data-id="10" data-name="零食">零食</text>
-        <text class="category-item sk-transparent sk-text-14-2857-404 sk-text" data-id="16" data-name="内衣袜子">内衣袜子</text>
+        <text class="category-item sk-transparent sk-text-14-2857-618 sk-text" data-id="1" data-name="今日推荐">今日推荐</text>
+        <text class="category-item sk-transparent sk-text-14-2857-122 sk-text" data-id="2" data-name="女装">女装</text>
+        <text class="category-item sk-transparent sk-text-14-2857-983 sk-text" data-id="5" data-name="男装">男装</text>
+        <text class="category-item sk-transparent sk-text-14-2857-366 sk-text" data-id="4" data-name="配饰">配饰</text>
+        <text class="category-item sk-transparent sk-text-14-2857-985 sk-text" data-id="13" data-name="女鞋">女鞋</text>
+        <text class="category-item sk-transparent sk-text-14-2857-123 sk-text" data-id="10" data-name="零食">零食</text>
+        <text class="category-item sk-transparent sk-text-14-2857-989 sk-text" data-id="16" data-name="内衣袜子">内衣袜子</text>
       </scroll-view>
-      <swiper autoplay="false" circular="true" indicator-dots="true" indicator-active-color="#d81e06" interval="3000" style="width: 412px; height: 164px;" current="0"></swiper>
+      <swiper autoplay="false" circular="true" indicator-dots="true" indicator-active-color="#d81e06" interval="3000" style="width: 375px; height: 150px;" current="0"></swiper>
+      <view class="sk-transparent sk-text-14-2857-887 sk-text">测试 点击下拉刷新</view>
       <view class="list">
         <view class="list-item">
-          <image class="goods-image sk-image" data-id="110207079" data-price="6" data-title="江西辣典100g纯辣片香辣辣条网红休闲零食欢乐鞋底手撕老式80后"></image>
-          <navigator class="title sk-transparent sk-text-14-2857-344 sk-text">江西辣典100g纯辣片香辣辣条网红休闲零食欢乐鞋底手撕老式80后</navigator>
-          <view class="price sk-transparent sk-text-14-2857-79 sk-text">¥6</view>
+          <image class="goods-image sk-image" data-id="110207079"></image>
+          <navigator class="title sk-transparent sk-text-14-2857-31 sk-text">江西辣典100g纯辣片香辣辣条网红休闲零食欢乐鞋底手撕老式80后</navigator>
+          <view class="price sk-transparent sk-text-14-2857-888 sk-text">¥6</view>
         </view>
         <view class="list-item">
-          <image class="goods-image sk-image" data-id="7224434" data-price="9.8" data-title="飚声1.2米2米3米5米加长线有线入耳塞式耳机电脑手机老式圆孔平头"></image>
-          <navigator class="title sk-transparent sk-text-14-2857-648 sk-text">飚声1.2米2米3米5米加长线有线入耳塞式耳机电脑手机老式圆孔平头</navigator>
-          <view class="price sk-transparent sk-text-14-2857-125 sk-text">¥9.8</view>
+          <image class="goods-image sk-image" data-id="7224434"></image>
+          <navigator class="title sk-transparent sk-text-14-2857-128 sk-text">飚声1.2米2米3米5米加长线有线入耳塞式耳机电脑手机老式圆孔平头</navigator>
+          <view class="price sk-transparent sk-text-14-2857-213 sk-text">¥9.8</view>
         </view>
         <view class="list-item">
-          <image class="goods-image sk-image" data-id="15861902" data-price="8.9" data-title="江西辣典欢乐鞋底辣条休闲零食辣片手撕老式80后豆皮诱惑辣棒豆卷"></image>
+          <image class="goods-image sk-image" data-id="15861902"></image>
         </view>
         <view class="list-item">
-          <image class="goods-image sk-image" data-id="41726383" data-price="13.9" data-title="饮用水消毒片井水消毒粉漂白食用净化水质水池清洁二氧化氯泡腾片"></image>
+          <image class="goods-image sk-image" data-id="41726383"></image>
         </view>
       </view>
     </view>

@@ -1,5 +1,5 @@
-<!-- <import src="index.skeleton.wxml" /> -->
-<!-- <template is="skeleton" wx:if="{{loading}}" /> -->
+<import src="index.skeleton.wxml" />
+<template is="skeleton" wx:if="{{loading}}" />
 
 <view class="home">
   <!-- 渲染自定义组件 search-bar -->
@@ -31,7 +31,7 @@
   <!-- 推荐列表 -->
   <view class="list">
     <view class="list-item" wx:for="{{ goods }}" wx:key="id">
-      <image src="{{ item.image }}" class="goods-image" data-id="{{ item.id }}"  bindtap="jumpToDetail" />
+      <image src="{{ item.image }}" class="goods-image" data-id="{{ item.id }}" bindtap="jumpToDetail" />
       <navigator class="title" url="/pages/detail/index?id={{item.id}}">{{ item.title }}</navigator>
       <view class="price">¥{{ item.price }}</view>
     </view>

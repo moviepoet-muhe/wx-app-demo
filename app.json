@@ -4,15 +4,13 @@
     "pages/cart/index",
     "pages/category/index",
     "pages/detail/index",
-    "pages/login/index",
     "pages/mine/index",
-    "pages/register/index",
     "pages/camera/index",
     "pages/map/index"
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "天天优选",
+    "navigationBarTitleText": "",
     "navigationBarBackgroundColor": "#ffffff"
   },
   "tabBar": {
